@@ -1,0 +1,157 @@
+--NAME: Jeongseon Yoon
+--Student ID: 109687202
+--Date: July 9th, 2021
+--Purpose: Midterm Project - DBS311NDD
+
+Q1.
+Last Name      
+---------------
+jones
+scoutten
+smith
+
+
+Q2.
+Employee ID
+-----------
+     200340
+     200330
+     200310
+     200280
+     200240
+     200220
+     200170
+     200140
+     200120
+     200010
+
+10 rows selected. 
+
+
+Q3.
+Table EMPLOYEE altered.
+
+
+42 rows updated.
+
+
+Table EMPLOYEE altered.
+
+
+EMPNO  FIRSTNAME    M LASTNAME        WOR PHON HIREDATE  JOB         EDLEVEL S BIRTHDATE     SALARY      BONUS       COMM PHONE               
+------ ------------ - --------------- --- ---- --------- -------- ---------- - --------- ---------- ---------- ---------- --------------------
+000250 DANIEL       S SMITH           D21 0961 30-OCT-99 CLERK            15 M 12-NOV-69      49180        400       1534 416-123-0961        
+000300 PHILIP       X SMITH           E11 2095 19-JUN-02 OPERATOR         14 M 27-OCT-76      37750        400       1420 416-123-2095        
+
+
+Q4.
+        ID NAME            DEPT JOB        YEARS
+---------- --------- ---------- ----- ----------
+        20 Pernal            20 Sales          8
+       190 Sneider           20 Clerk          8
+        40 O'Brien           38 Sales          6
+       220 Smith             51 Sales          7
+       310 Graham            66 Sales         13
+
+
+Q5.
+NAME            DEPT JOB  
+--------- ---------- -----
+Burke             66 Clerk
+Gonzales          66 Sales
+Lea               66 Mgr  
+Wilson            66 Sales
+
+
+Q6.
+Name                          Job      Variable Pay
+----------------------------- -------- ------------
+Natz, Kim                     ANALYST          2874
+Nicholls, Heather             ANALYST          2874
+Quintana, Delores             ANALYST          2404
+O'Connell, Sean               CLERK            2940
+Orlando, Greg                 CLERK            2940
+Johnson, Sybil                CLERK            1680
+John, Reba                    DESIGNER         2987
+Lutz, Jennifer                DESIGNER         2987
+Jones, William                DESIGNER         1862
+Lee, Wing                     FIELDREP         2530
+Wong, Helena                  FIELDREP         2530
+
+Name                          Job      Variable Pay
+----------------------------- -------- ------------
+Mehta, Ramlal                 FIELDREP         1996
+Thompson, Michael             MANAGER          4100
+Spenser, Theodore             MANAGER          2592
+Schneider, Ethel              OPERATOR         2600
+Schwartz, Eileen              OPERATOR         2600
+Parker, John                  OPERATOR         1527
+Haas, Christine               PRES             5220
+Hemminger, Dian               SALESREP         5220
+Lucchessi, Vincenzo           SALESREP         4620
+
+20 rows selected. 
+
+
+Q7.
+NAME     
+---------
+Abrahams
+Daniels
+Davis
+Edwards
+Gonzales
+Hanes
+James
+Jones
+Quill
+Sanders
+Williams
+
+NAME     
+---------
+Wilson
+
+12 rows selected. 
+
+
+Q8.
+NAME      JOB       SALARY       COMM
+--------- ----- ---------- ----------
+James     Clerk    43504.6      128.2
+Ngan      Clerk    42508.2      206.6
+Naughton  Clerk   42954.75        180
+Yamaguchi Clerk    40505.9       75.6
+Kermisch  Clerk    42258.5      110.1
+Abrahams  Clerk   37009.75      236.5
+Sneider   Clerk   34252.75      126.5
+Scoutten  Clerk    41508.6       84.2
+Wheeler   Clerk      74460      513.3
+Burke     Clerk      49988       55.5
+Gafney    Clerk    43030.5        188
+
+11 rows selected. 
+
+
+Q9.
+JOB      average compensation
+-------- --------------------
+FIELDREP           40813.3333
+OPERATOR                43850
+DESIGNER              59891.6
+SALESREP                61420
+ANALYST            72930.6667
+MANAGER            92078.6667
+PRES                   157970
+
+7 rows selected. 
+
+
+Q10.
+FIRSTNAME    LASTNAME        HIREDATE  BIRTHDATE    EDLEVEL years of service
+------------ --------------- --------- --------- ---------- ----------------
+MARILYN      SCOUTTEN        07-JUL-03 21-FEB-79         17               18
+WILLIAM      JONES           11-APR-98 23-FEB-03         17               23
+DANIEL       SMITH           30-OCT-99 12-NOV-69         15               21
+PHILIP       SMITH           19-JUN-02 27-OCT-76         14               19
+

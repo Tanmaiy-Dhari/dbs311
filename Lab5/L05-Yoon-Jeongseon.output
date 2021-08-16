@@ -1,0 +1,50 @@
+-- ***********************
+-- Student Name: Jeongseon Yoon
+-- Student ID: 109687202
+-- Date: June 25, 2021
+-- Purpose: Lab 05 - DBS311NDD
+-- ***********************
+
+Q1.
+Procedure EVEN_ODD compiled
+PL/SQL procedure successfully completed.
+PL/SQL procedure successfully completed.
+
+[Executed Output]
+The number is even.
+The number is odd.
+
+Q2.
+Procedure FIND_EMPLOYEE compiled
+PL/SQL procedure successfully completed.
+
+[Executed Output]
+First name: Summer
+Last name: Payne
+Email: summer.payne@example.com
+Phone: 515.123.8181
+Hire date: 07-JUN-16
+Job title: Public Accountant
+
+Q3.
+Procedure UPDATE_PRICE_BY_CAT compiled
+PL/SQL procedure successfully completed.
+
+[Executed Output]
+Updated rows: 100
+
+Q4.
+Procedure UPDATE_PRICE_UNDER_AVG compiled
+PL/SQL procedure successfully completed.
+
+[Executed Output]
+Updated rows: 576
+
+Q5.
+Procedure PRODUCT_PRICE_REPORT compiled
+PL/SQL procedure successfully completed.
+
+[Executed Output]
+Cheap: 196
+Fair: 366
+Expensive: 14

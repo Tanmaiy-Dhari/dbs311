@@ -1,0 +1,74 @@
+-- ***********************
+-- Student Name: Jeongseon Yoon
+-- Student ID: 109687202
+-- Date: July 30th, 2021
+-- Purpose: Lab 08 - DBS311NDD
+-- ***********************
+
+Q1.
+> db.products.find({}, {"name": 1, "price": 1, "_id": 0})
+{ "name" : "AC7 Phone", "price" : 320 }
+{ "name" : "AC3 Phone", "price" : 200 }
+{ "name" : "Phone Extended Warranty", "price" : 38 }
+{ "name" : "AC3 Case Green", "price" : 12 }
+{ "name" : "AC3 Case Red", "price" : 12 }
+{ "name" : "Phone Service Basic Plan" }
+{ "name" : "AC3 Series Charger", "price" : 19 }
+{ "name" : "Phone Service Core Plan" }
+{ "name" : "AC3 Case Black", "price" : 12.5 }
+{ "name" : "Phone Service Family Plan" }
+{ "name" : "Cable TV Basic Service Package" }
+
+Q2.
+> db.products.find({"type":"accessory"}, {"name": 1, "price": 1, "_id": 0})
+{ "name" : "AC3 Case Green", "price" : 12 }
+{ "name" : "AC3 Case Red", "price" : 12 }
+{ "name" : "AC3 Series Charger", "price" : 19 }
+{ "name" : "AC3 Case Black", "price" : 12.5 }
+
+Q3.
+> db.products.find({"price": {"$gte":12, "$lte": 20}}, {"name": 1, "price": 1, "_id": 0})
+{ "name" : "AC3 Case Green", "price" : 12 }
+{ "name" : "AC3 Case Red", "price" : 12 }
+{ "name" : "AC3 Series Charger", "price" : 19 }
+{ "name" : "AC3 Case Black", "price" : 12.5 }
+
+Q4.
+> db.products.find({"type": {"$nin": ["accessory"]}}, {"_id": 1, "name": 1, "price": 1, "type": 1})
+{ "_id" : "ac7", "name" : "AC7 Phone", "type" : "phone", "price" : 320 }
+{ "_id" : "ac3", "name" : "AC3 Phone", "type" : "phone", "price" : 200 }
+{ "_id" : "ac12", "name" : "Phone Extended Warranty", "type" : "warranty", "price" : 38 }
+{ "_id" : "ac15", "name" : "Phone Service Basic Plan", "type" : "service" }
+{ "_id" : "ac16", "name" : "Phone Service Core Plan", "type" : "service" }
+{ "_id" : "ac17", "name" : "Phone Service Family Plan", "type" : "service" }
+{ "_id" : "ac18", "name" : "Cable TV Basic Service Package", "type" : "tv" }
+
+Q5.
+> db.products.find({"type": {"$in": ["accessory", "service"]}}, {"_id": 1, "name": 1, "price": 1, "type": 1})
+{ "_id" : "ac11", "name" : "AC3 Case Green", "type" : [ "accessory", "case" ], "price" : 12 }
+{ "_id" : "ac14", "name" : "AC3 Case Red", "type" : [ "accessory", "case" ], "price" : 12 }
+{ "_id" : "ac15", "name" : "Phone Service Basic Plan", "type" : "service" }
+{ "_id" : "ac10", "name" : "AC3 Series Charger", "type" : [ "accessory", "charger" ], "price" : 19 }
+{ "_id" : "ac16", "name" : "Phone Service Core Plan", "type" : "service" }
+{ "_id" : "ac13", "name" : "AC3 Case Black", "type" : [ "accessory", "case" ], "price" : 12.5 }
+{ "_id" : "ac17", "name" : "Phone Service Family Plan", "type" : "service" }
+
+Q6.
+> db.products.find({"type": {"$exists": true}}, {"_id": 1, "name": 1, "price": 1, "type": 1})
+{ "_id" : "ac7", "name" : "AC7 Phone", "type" : "phone", "price" : 320 }
+{ "_id" : "ac3", "name" : "AC3 Phone", "type" : "phone", "price" : 200 }
+{ "_id" : "ac12", "name" : "Phone Extended Warranty", "type" : "warranty", "price" : 38 }
+{ "_id" : "ac11", "name" : "AC3 Case Green", "type" : [ "accessory", "case" ], "price" : 12 }
+{ "_id" : "ac14", "name" : "AC3 Case Red", "type" : [ "accessory", "case" ], "price" : 12 }
+{ "_id" : "ac15", "name" : "Phone Service Basic Plan", "type" : "service" }
+{ "_id" : "ac10", "name" : "AC3 Series Charger", "type" : [ "accessory", "charger" ], "price" : 19 }
+{ "_id" : "ac16", "name" : "Phone Service Core Plan", "type" : "service" }
+{ "_id" : "ac13", "name" : "AC3 Case Black", "type" : [ "accessory", "case" ], "price" : 12.5 }
+{ "_id" : "ac17", "name" : "Phone Service Family Plan", "type" : "service" }
+{ "_id" : "ac18", "name" : "Cable TV Basic Service Package", "type" : "tv" }
+
+Q7.
+> db.products.find({"$and": [{"type": "accessory"}, {"type": "case"}]}, {"_id": 1, "name": 1, "price": 1, "type": 1})
+{ "_id" : "ac11", "name" : "AC3 Case Green", "type" : [ "accessory", "case" ], "price" : 12 }
+{ "_id" : "ac14", "name" : "AC3 Case Red", "type" : [ "accessory", "case" ], "price" : 12 }
+{ "_id" : "ac13", "name" : "AC3 Case Black", "type" : [ "accessory", "case" ], "price" : 12.5 }
